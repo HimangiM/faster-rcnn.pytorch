@@ -207,10 +207,15 @@ python test_net.py --dataset pascal_voc --net vgg16 \
                    --cuda
 ```
 Specify the specific model session, chechepoch and checkpoint, e.g., SESSION=1, EPOCH=6, CHECKPOINT=416.
+Match SESSION, EPOCH, CHECKPOINT with the saved model name. For example, saved model name is faster_rcnn_1_6_1985.pth
+then session=1, epoch=6, checkpoint=1985. 
+Saved models are in ./models/networks_name(res101/vgg16)/dataset_name(vg/pascal_voc/mscoco)
+
 
 ## Demo
 
 If you want to run detection on your own images with a pre-trained model, download the pretrained model listed in above tables or train your own models at first, then add images to folder $ROOT/images, and then run
+
 ```
 python demo.py --net vgg16 \
                --checksession $SESSION --checkepoch $EPOCH --checkpoint $CHECKPOINT \
