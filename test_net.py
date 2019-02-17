@@ -121,8 +121,8 @@ if __name__ == '__main__':
       args.imdbval_name = "imagenet_val"
       args.set_cfgs = ['ANCHOR_SCALES', '[8, 16, 32]', 'ANCHOR_RATIOS', '[0.5,1,2]']
   elif args.dataset == "vg":
-      args.imdb_name = "vg_150-50-50_minitrain"
-      args.imdbval_name = "vg_150-50-50_minival"
+      args.imdb_name = "vg_1600-40-20_minitrain"
+      args.imdbval_name = "vg_1600-40-20_minival"
       args.set_cfgs = ['ANCHOR_SCALES', '[4, 8, 16, 32]', 'ANCHOR_RATIOS', '[0.5,1,2]']
 
   args.cfg_file = "cfgs/{}_ls.yml".format(args.net) if args.large_scale else "cfgs/{}.yml".format(args.net)
